@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<section class="hero-wrapper d-flex justify-content-center align-items-center text-center">
+  <div class="hero-content text-white px-3">
+    <h1 class="display-4 fw-bold mb-3">Find Your Film Vibe 🎬</h1>
+
+    <p class="lead mb-4">
+      Discover movies that match your mood — feel-good, action-packed, or mind-bending.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <button
+        *ngFor="let mood of moods"
+        class="btn btn-glass text-white rounded-pill px-4 py-2"
+        (click)="selectMood(mood)"
+      >
+        {{ mood }}
+      </button>
+    </div>
+  </div>
+</section>
