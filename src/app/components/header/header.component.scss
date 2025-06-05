@@ -1,5 +1,14 @@
-.frosted-glass {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(214, 241, 9, 0.5);
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1c1c1c;
+  color: white;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
 }

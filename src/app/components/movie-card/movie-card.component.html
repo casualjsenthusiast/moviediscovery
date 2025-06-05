@@ -1,0 +1,10 @@
+<div class="card">
+  <img [src]="movie.poster_path ? 'https://image.tmdb.org/t/p/w500' + movie.poster_path : 'assets/no-image.png'"
+    [alt]="movie.title || 'Movie Poster'" />
+
+  <div class="card-body">
+    <h3>{{ movie.title || 'Untitled' }}</h3>
+    <p>{{ movie.release_date ? (movie.release_date | date:'yyyy') : 'N/A' }}</p>
+    <p>⭐ {{ movie.vote_average ?? 'N/A' }}</p>
+  </div>
+</div>

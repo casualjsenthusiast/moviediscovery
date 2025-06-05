@@ -1,44 +1,70 @@
-.hero-wrapper {
-  height: 90vh;
-  background-image: url('../../../assets/landing-bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  padding: 2rem;
-  overflow: hidden;
+.landing-wrapper {
+  background: #121212;
+  color: white;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-  }
+.banner img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1rem;
+}
 
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-  }
+.category-chips {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
 
-  h1 {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-  }
+.category-chips button {
+  background: #444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
-  p {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-  }
+.category-chips button.active {
+  background: #e50914;
+}
 
-  .btn-glass {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(6px);
-    transition: all 0.3s ease-in-out;
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: scale(1.05);
-    }
-  }
+.no-results {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination-controls button {
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
 }
