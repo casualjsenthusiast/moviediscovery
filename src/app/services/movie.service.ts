@@ -41,4 +41,22 @@ export class MovieService {
       }
     });
   }
+
+  getMovieDetails(id: string): Observable<any> {
+    return this.http.get(`${this.config.tmdbBaseUrl}/movie/${id}`, {
+      params: { api_key: this.config.tmdbApiKey }
+    });
+  }
+
+  getMovieCredits(id: string): Observable<any> {
+    return this.http.get(`${this.config.tmdbBaseUrl}/movie/${id}/credits`, {
+      params: { api_key: this.config.tmdbApiKey }
+    });
+  }
+
+  getSimilarMovies(id: string): Observable<any> {
+    return this.http.get(`${this.config.tmdbBaseUrl}/movie/${id}/similar`, {
+      params: { api_key: this.config.tmdbApiKey }
+    });
+  }
 }

@@ -1,27 +1,61 @@
-# Movie Discovery
+# 🎬 MoodFlix - TMDB Movie Discovery App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.
+MoodFlix is a responsive Angular-based movie discovery application that fetches movie data from [The Movie Database (TMDB)](https://www.themoviedb.org/). It allows users to explore movies based on moods (genres), search for specific titles, view movie details, add/remove from watchlist, and much more.
 
-## Development server
+## 🚀 Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Responsive UI using **Bootstrap**
+- Mood-based movie browsing (e.g., *Feel Good*, *Action Fix*, *Mind Benders*)
+- Lazy-loaded landing page
+- Movie detail view with:
+  - Movie info
+  - Cast
+  - Similar movies
+- Search with debounce and genre auto-detection
+- Add/Remove movies from **Watchlist** using `localStorage`
+- Pagination and navigation controls
+- Modular standalone components (cards, headers, etc.)
 
-## Code scaffolding
+## 🧰 Tech Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 17+
+- RxJS
+- Bootstrap 5
+- TMDB API
 
-## Build
+## 📝 Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Node.js](https://nodejs.org/) (v18 or above)
+- [Angular CLI](https://angular.io/cli)
 
-## Running unit tests
+## 🔑 TMDB API Key Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Go to [TMDB Developers](https://developer.themoviedb.org/) and create an account.
+2. Visit [API section](https://www.themoviedb.org/settings/api) and generate an API key (v3 auth).
+3. Create a file at `src/assets/config.json`:
 
-## Running end-to-end tests
+{
+  "tmdbApiKey": "YOUR_TMDB_API_KEY",
+  "tmdbBaseUrl": "https://api.themoviedb.org/3"
+}
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## ⚙️ Installation and Setup
 
-## Further help
+# Clone the repo
+git clone https://github.com/your-username/tmdb-movie-app.git
+cd tmdb-movie-app
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Install dependencies
+npm install
+
+# Run the application
+ng serve
+
+Visit http://localhost:4200 to view the app in your browser.
+
+## 📷 Screenshots
+![alt text](image.png)
+![alt text](image-1.png)
+
+## 📄 License
+This project is licensed under the MIT License.

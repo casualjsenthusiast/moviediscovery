@@ -1,0 +1,24 @@
+<div class="movie-detail-wrapper" *ngIf="movie">
+  <div class="poster">
+    <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="movie.title" />
+  </div>
+  <div class="details">
+    <h1>{{ movie.title }} <span>({{ movie.release_date | date:'yyyy' }})</span></h1>
+    <p>{{ movie.overview }}</p>
+    <p><strong>Rating:</strong> ⭐ {{ movie.vote_average }}</p>
+    <p><strong>Genres:</strong> {{ genreList }}</p>
+
+    <h3>Cast</h3>
+    <ul class="cast">
+      <li *ngFor="let actor of cast.slice(0, 10)">{{ actor.name }} as {{ actor.character }}</li>
+    </ul>
+
+    <h3>Similar Movies</h3>
+    <div class="similar-movies">
+      <div class="card" *ngFor="let sm of similarMovies.slice(0, 6)">
+        <img [src]="'https://image.tmdb.org/t/p/w200' + sm.poster_path" alt="sm.title" />
+        <p>{{ sm.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>

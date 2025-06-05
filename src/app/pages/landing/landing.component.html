@@ -10,7 +10,7 @@
     </button>
   </div>
   <div class="movie-list">
-    <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+    <app-movie-card *ngFor="let movie of movies" [movie]="movie" (click)="goToDetails(movie.id)"></app-movie-card>
   </div>
   <div *ngIf="noResults" class="no-results">No movies found</div>
   <div class="pagination-controls" *ngIf="!noResults && movies.length">
