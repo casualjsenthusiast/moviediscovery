@@ -1,0 +1,48 @@
+.movie-detail-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background: #121212;
+  color: white;
+  padding: 2rem;
+}
+
+.poster img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.details {
+  flex: 1;
+  padding: 1rem 2rem;
+}
+
+h1 span {
+  font-weight: normal;
+  color: #ccc;
+}
+
+.cast {
+  list-style: none;
+  padding: 0;
+}
+
+.similar-movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.similar-movies .card {
+  background: #2a2a2a;
+  padding: 0.5rem;
+  border-radius: 8px;
+  width: 150px;
+  text-align: center;
+  color: #fff;
+}
+
+.similar-movies img {
+  width: 100%;
+  border-radius: 5px;
+}

@@ -4,6 +4,7 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { MovieService } from '../../services/movie.service';
 import { MovieCardComponent } from '../../components/movie-card/movie-card.component';
 import { debounceTime, distinctUntilChanged, Subject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -30,7 +31,7 @@ export class LandingComponent {
   page = 1;
   totalPages = 1;
 
-  constructor(private movieService: MovieService) {
+  constructor(private movieService: MovieService, private router: Router) {
     this.loadMovies();
 
     this.searchSubject
@@ -103,15 +104,28 @@ export class LandingComponent {
     });
   }
 
+  /**
+   * Navigates to the next page
+   */
   nextPage() {
     this.page++;
     this.loadMovies();
   }
 
+  /**
+   * Navigates to the previous page.
+   */
   prevPage() {
     if (this.page > 1) {
       this.page--;
       this.loadMovies();
     }
+  }
+
+  /**
+   * Route to movie details component.
+   */
+  goToDetails(id: number) {
+    this.router.navigate(['/movie', id]);
   }
 }
