@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,11 +8,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  @Output() search = new EventEmitter<string>();
 
-  constructor() { }
-
-  ngOnInit(): void {
+  /**
+   * Emits search event to parent component.
+   * @param term The search string.
+   */
+  onSearch(event: Event) {
+    this.search.emit((event.target as HTMLInputElement).value);
   }
-
 }

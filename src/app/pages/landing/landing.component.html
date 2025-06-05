@@ -1,21 +1,21 @@
-<app-header></app-header>
-
-<section class="hero-wrapper d-flex justify-content-center align-items-center text-center">
-  <div class="hero-content text-white px-3">
-    <h1 class="display-4 fw-bold mb-3">Find Your Film Vibe 🎬</h1>
-
-    <p class="lead mb-4">
-      Discover movies that match your mood — feel-good, action-packed, or mind-bending.
-    </p>
-
-    <div class="d-flex flex-wrap justify-content-center gap-3">
-      <button
-        *ngFor="let mood of moods"
-        class="btn btn-glass text-white rounded-pill px-4 py-2"
-        (click)="selectMood(mood)"
-      >
-        {{ mood }}
-      </button>
-    </div>
+<div class="landing-wrapper">
+  <app-header (search)="onSearch($event)"></app-header>
+  <div class="banner">
+    <img src="assets/landing-bg.png" alt="Banner" />
   </div>
-</section>
+  <div class="category-chips">
+    <button *ngFor="let cat of categories" (click)="selectCategory(cat)"
+      [class.active]="selectedCategory && cat.genre === selectedCategory.genre">
+      {{ cat.label }}
+    </button>
+  </div>
+  <div class="movie-list">
+    <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+  </div>
+  <div *ngIf="noResults" class="no-results">No movies found</div>
+  <div class="pagination-controls" *ngIf="!noResults && movies.length">
+    <button (click)="prevPage()" [disabled]="page === 1">⬅️ Prev</button>
+    <span>Page {{ page }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="page === totalPages">Next ➡️</button>
+  </div>
+</div>
