@@ -70,7 +70,7 @@ npm run test
 
   - Build command: ng build --configuration production
 
-  - Publish directory: dist/<your-app-name>/browser
+  - Publish directory: dist/your-app-name/browser
 
 5. Add a _redirects file in your src/ folder with the following content:
   ```/*    /index.html   200```
