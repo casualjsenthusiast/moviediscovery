@@ -59,5 +59,32 @@ npm run test
 ![alt text](image.png)
 ![alt text](image-1.png)
 
+## ☁️ Deployment on Netlify
+1. Push your code to GitHub.
+
+2. Go to Netlify and click “Add New Site > Import from Git”.
+
+3. Connect your GitHub account and choose your repo.
+
+4. Set the build settings:
+
+  - Build command: ng build --configuration production
+
+  - Publish directory: dist/<your-app-name>/browser
+
+5. Add a _redirects file in your src/ folder with the following content:
+  ```/*    /index.html   200```
+
+  Then, include this file in the Angular build output by updating angular.json:
+  "assets": [
+    "src/favicon.ico",
+    "src/assets",
+    "src/_redirects"
+  ]
+
+6. Rebuild and deploy automatically. Your Angular app will now be live on a Netlify URL.
+
+Demo link: https://moviedisc.netlify.app/
+
 ## 📄 License
 This project is licensed under the MIT License.
