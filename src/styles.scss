@@ -1,14 +1,15 @@
+@import './scss-vars/colors';
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(ellipse at top left, #1a1f2b, #121217);
-  color: #fff;
+  color: $app-white;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: #00bcd4;
-  color: #000;
+  background: $app-blue;
+  color: $app-black;
 }

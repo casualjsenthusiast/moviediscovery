@@ -1,6 +1,8 @@
+@import '../../../scss-vars/colors';
+
 .landing-wrapper {
-  background: #121212;
-  color: white;
+  background: $app-movie-detail-bg;
+  color: $app-white;
   min-height: 100vh;
   padding-bottom: 2rem;
 }
@@ -21,8 +23,8 @@
 }
 
 .category-chips button {
-  background: #444;
-  color: white;
+  background: $app-chips-bg;
+  color: $app-white;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 20px;
@@ -30,7 +32,7 @@
 }
 
 .category-chips button.active {
-  background: #e50914;
+  background: $app-chips-bg-active;
 }
 
 .movie-list {
@@ -44,7 +46,7 @@
   text-align: center;
   margin-top: 2rem;
   font-size: 1.2rem;
-  color: #ccc;
+  color: $app-gray;
 }
 
 .pagination-controls {
@@ -57,14 +59,14 @@
 
 .pagination-controls button {
   padding: 0.5rem 1rem;
-  background-color: #e50914;
-  color: white;
+  background-color: $app-chips-bg-active;
+  color: $app-white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .pagination-controls button:disabled {
-  background-color: #555;
+  background-color: $app-button-disabled;
   cursor: not-allowed;
 }

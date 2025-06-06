@@ -1,3 +1,5 @@
+@import '../../../scss-vars/colors';
+
 .card {
   width: 200px;
   height: 100%; // allows container to control height
@@ -5,11 +7,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #2a2a2a;
-  color: #fff;
+  background: $app-card-bg;
+  color: $app-white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px $app-black-20;
   cursor: pointer;
 }
 
@@ -30,8 +32,8 @@
 
 button {
   margin-top: 0.5rem;
-  background: #e50914;
-  color: white;
+  background: $app-chips-bg-active;
+  color: $app-white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
