@@ -1,7 +1,7 @@
 @import '../../../scss-vars/colors';
 
 .card {
-  width: 200px;
+  width: 100%;
   height: 100%; // allows container to control height
   min-height: 400px; // enforce same height for all cards
   display: flex;

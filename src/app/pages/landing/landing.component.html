@@ -9,8 +9,8 @@
       {{ cat.label }}
     </button>
   </div>
-  <div class="movie-list">
-    <app-movie-card *ngFor="let movie of movies" [movie]="movie" (click)="goToDetails(movie.id)"></app-movie-card>
+  <div class="movie-list row">
+    <app-movie-card class="col-lg-2 col-md-4 col-sm-6 col-xs-10" *ngFor="let movie of movies" [movie]="movie" (click)="goToDetails(movie.id)"></app-movie-card>
   </div>
   <div *ngIf="noResults" class="no-results">No movies found</div>
   <div class="pagination-controls" *ngIf="!noResults && movies.length">
