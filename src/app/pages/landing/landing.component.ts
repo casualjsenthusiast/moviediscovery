@@ -52,7 +52,7 @@ export class LandingComponent {
   loadMovies() {
     if (!this.selectedCategory) return;
 
-    this.movieService.fetchMoviesByCategory(this.selectedCategory.genre, this.page).subscribe(data => {
+    this.movieService.fetchMoviesByCategory(this.selectedCategory.genre, this.page)?.subscribe(data => {
       this.movies = data.results.filter((movie: any) => movie.poster_path);
       this.totalPages = data.total_pages;
       this.noResults = this.movies.length === 0;

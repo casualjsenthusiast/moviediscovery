@@ -41,17 +41,19 @@ MoodFlix is a responsive Angular-based movie discovery application that fetches 
 
 ## ⚙️ Installation and Setup
 
-# Clone the repo
+1. Clone the repo
 git clone https://github.com/your-username/tmdb-movie-app.git
 cd tmdb-movie-app
 
-# Install dependencies
+2. Install dependencies
 npm install
 
-# Run the application
-ng serve
-
+3. Run the application
+npm run start
 Visit http://localhost:4200 to view the app in your browser.
+
+4. Run test cases
+npm run test
 
 ## 📷 Screenshots
 ![alt text](image.png)
