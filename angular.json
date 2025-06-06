@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "temp": {
+    "moviediscovery": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/temp",
+            "outputPath": "dist/moviediscovery",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "temp:build:production"
+              "buildTarget": "moviediscovery:build:production"
             },
             "development": {
-              "buildTarget": "temp:build:development"
+              "buildTarget": "moviediscovery:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "temp:build"
+            "buildTarget": "moviediscovery:build"
           }
         },
         "test": {

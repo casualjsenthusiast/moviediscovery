@@ -1,8 +1,10 @@
+@import '../../../scss-vars/colors';
+
 .movie-detail-wrapper {
   display: flex;
   flex-wrap: wrap;
-  background: #121212;
-  color: white;
+  background: $app-movie-detail-bg;
+  color: $app-white;
   padding: 2rem;
 }
 
@@ -18,7 +20,7 @@
 
 h1 span {
   font-weight: normal;
-  color: #ccc;
+  color: $app-gray;
 }
 
 .cast {
@@ -34,12 +36,12 @@ h1 span {
 }
 
 .similar-movies .card {
-  background: #2a2a2a;
+  background: $app-card-bg;
   padding: 0.5rem;
   border-radius: 8px;
   width: 150px;
   text-align: center;
-  color: #fff;
+  color: $app-white;
 }
 
 .similar-movies img {
